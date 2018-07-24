@@ -1,24 +1,56 @@
 .wrapper {
-
+  display: grid;
+  grid-template-rows: 150px 150px 200px;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-gap: 10px;
+  grid-template-areas: "header header header header" 
+                       "content content content sidebar"
+                       "footer footer footer sidebar";
 }
 
 header {
   background-color: yellow;
+  grid-area: header;
 }
 
 main {
   background-color: green;
+  grid-area: content;
 }
 
 aside {
   background-color: pink;
+  grid-area: sidebar;
 }
 
-@media screen and (max-width: 480px) {
+/* footer {
+  grid-area: footer;
+  background-color: red;
+  display: flex;
+} */
+
+.footer1 {
+  background-color: blue;
+}
+
+.footer2 {
+  background-color: fuchsia;
+}
+
+.footer3 {
+  background-color: orange;
+}
+
+/* @media screen and (max-width: 480px) {
   .wrapper {
-
+    grid-template-rows: 100px 400px 100px;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "header" 
+                        "content" 
+                        "sidebar";
   }
-}
+} */
 
 /*
 break points
